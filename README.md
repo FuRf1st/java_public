@@ -1,2 +1,2 @@
-# Java-Public
+# java_public
 For University
