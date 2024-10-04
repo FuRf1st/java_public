@@ -18,10 +18,10 @@ class Car {
     public void addPassenger(Passenger passenger) {
         if (passenger1 == null) {
             passenger1 = passenger;
-            System.out.println(passenger.getName() + " добавлен, как Пассажир №1.");
+            System.out.println(passenger.getName() + " добавлен, как Пассажир 1.");
         } else if (passenger2 == null) {
             passenger2 = passenger;
-            System.out.println(passenger.getName() + " добавлен, как Пассажир №2.");
+            System.out.println(passenger.getName() + " добавлен, как Пассажир 2.");
         } else {
             System.out.println("Машина полная. " + passenger.getName() + " не может войти.");
         }
@@ -30,10 +30,10 @@ class Car {
     // Метод для удаления пассажира из автомобиля
     public void removePassenger(Passenger passenger) {
         if (passenger1 != null && passenger1.getName().equals(passenger.getName())) {
-            System.out.println(passenger.getName() + " удалён, как Пассажир №1.");
+            System.out.println(passenger.getName() + " удалён, как Пассажир 1.");
             passenger1 = null;
         } else if (passenger2 != null && passenger2.getName().equals(passenger.getName())) {
-            System.out.println(passenger.getName() + " удалён, как Пассажир №2.");
+            System.out.println(passenger.getName() + " удалён, как Пассажир 2.");
             passenger2 = null;
         } else {
             System.out.println(passenger.getName() + " не в машине.");
@@ -48,13 +48,13 @@ class Car {
         if (passenger1 != null) {
             System.out.println(passenger1.getPassengerInfo());
         } else {
-            System.out.println("Пассажир №1: Нет");
+            System.out.println("Пассажир 1: Нет");
         }
         
         if (passenger2 != null) {
             System.out.println(passenger2.getPassengerInfo());
         } else {
-            System.out.println("Пассажир №2: Нет");
+            System.out.println("Пассажир 2: Нет");
         }
     }
 }
