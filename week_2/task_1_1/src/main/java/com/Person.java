@@ -1,20 +1,20 @@
 package com;
 
-public class Meet_classes {
+public class Person {
         // Атрибуты класса
         private String name;
         private String birth_date;
         private String city;
     
         // Конструктор по умолчанию
-        public Meet_classes() {
+        public Person() {
             this.name = "Неизвестно";
             this.birth_date = "Неизвестно";
             this.city = "Неизвестно";
         }
     
         // Конструктор с параметрами
-        public Meet_classes(String name, String birth_date, String city) {
+        public Person(String name, String birth_date, String city) {
             this.name = name;
             this.birth_date = birth_date;
             this.city = city;

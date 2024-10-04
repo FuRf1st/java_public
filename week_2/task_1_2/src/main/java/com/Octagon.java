@@ -25,12 +25,12 @@ public class Octagon {
     }
 
     // Метод для вычисления площади восьмиугольника
-    public double CalculateArea() {
+    public double calculateArea() {
         return 8 * (Math.sqrt(2) - 1) * Math.pow(innerRadius, 2);
     }
 
     // Метод для вычисления периметра восьмиугольника
-    public double CalculatePerimeter() {
+    public double calculatePerimeter() {
         double sideLength = (innerRadius * 2) / (Math.sqrt(2) + 1);
         return 8 * sideLength;
     }

@@ -4,18 +4,18 @@ public class Main{
     
     public static void main(String[] args) {
         // Примеры классов
-        Meet_classes Meet_classes1 = new Meet_classes(); // По умолчанию
-        Meet_classes Meet_classes2 = new Meet_classes("Александр", "30.01.2000", "Москва");
-        Meet_classes Meet_classes3 = new Meet_classes("Анна", "11.09.2001", "Пенза");
+        Person Person1 = new Person(); // По умолчанию
+        Person Person2 = new Person("Александр", "30.01.2000", "Москва");
+        Person Person3 = new Person("Анна", "11.09.2001", "Пенза");
 
         // Вывод данных класса
         System.out.println("Первая персона:");
-        Meet_classes1.displayInfo();
+        Person1.displayInfo();
 
         System.out.println("\nВторая персона:");
-        Meet_classes2.displayInfo();
+        Person2.displayInfo();
 
         System.out.println("\nТретья персона:");
-        Meet_classes3.displayInfo();
+        Person3.displayInfo();
     }
 }

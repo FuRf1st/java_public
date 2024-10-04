@@ -15,8 +15,8 @@ public class Main {
             Octagon octagon = new Octagon(r);
 
             // Вывод площади и периметра
-        System.out.println("Площадь: " + octagon.CalculateArea());
-        System.out.println("Периметр: " + octagon.CalculatePerimeter());
+        System.out.println("Площадь: " + octagon.calculateArea());
+        System.out.println("Периметр: " + octagon.calculatePerimeter());
         }
     }
 }
