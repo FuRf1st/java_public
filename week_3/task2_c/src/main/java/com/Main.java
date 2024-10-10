@@ -10,7 +10,7 @@ public class Main {
         int n = scanner.nextInt();
 
         if (n < 2) {
-            System.out.println("Простых чисел меньше 2 не существует.");
+            System.out.println("Ошибка");
         } 
 
         else {

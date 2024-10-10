@@ -1,7 +1,7 @@
 package com;
 
 public class WeatherComputer {
-    // Метод для принятия решения
+    
     public static boolean canPlayBadminton(int dayofweek, String temperature, String precipitation, String wind, String humidity) {
         // Можно играть только по воскресеньям (7 - это Воскресенье)
         if (dayofweek != 7) {
