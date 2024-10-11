@@ -23,7 +23,6 @@ public class Main {
 
         int count = MaxFinder.countMax(numbers, max);
 
-        System.out.println("Максимальное число: " + max);
         System.out.println("Кол-во чисел, равных максимальному: " + count);
     }
 }
