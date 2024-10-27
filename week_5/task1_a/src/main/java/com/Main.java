@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        ReaderofFile fileReader = new ReaderofFile();
+        FileReader fileReader = new FileReader();
 
         Scanner scanner = new Scanner(System.in);
 
