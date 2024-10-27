@@ -21,7 +21,7 @@ public class OneMoreExtraException {
         // Проход по всем показаниям
         for (int i = 0; i < entries.length; i++) {
             String entry = entries[i];
-            if (entry.length() < 3) { // Проверка на валидность длины записи
+            if (entry.length() < 3) {
                 throw new InvalidSensorDataException("Неверный формат данных датчиков: " + entry);
             }
 
@@ -30,7 +30,7 @@ public class OneMoreExtraException {
             try {
                 temperature = Integer.parseInt(entry.substring(2)); // остальные символы — температура
             } catch (NumberFormatException e) {
-                throw new InvalidSensorDataException("Температура должна быть числом: " + entry.substring(2));
+                throw new InvalidSensorDataException("Температура должна быть числом: " + entry.substring(2) + " в показании " + entry);
             }
 
             boolean sensorExists = false;
@@ -100,14 +100,12 @@ public class OneMoreExtraException {
     }
 }
 
-// Создаем собственное исключение для неверной опции сортировки
 class InvalidSortOptionException extends Exception {
     public InvalidSortOptionException(String message) {
         super(message);
     }
 }
 
-// Создаем собственное исключение для неверных данных датчиков
 class InvalidSensorDataException extends Exception {
     public InvalidSensorDataException(String message) {
         super(message);
