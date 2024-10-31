@@ -14,7 +14,7 @@ public class Main {
         LatinEnglishDictionary dictionary = new LatinEnglishDictionary();
 
         // Чтение кол-ва английских слов в словаре
-        System.out.print("Введите число слов и сами слова (построчно): ");
+        System.out.print("Введите число слов и сами слова (построчно): \n");
         int n = Integer.parseInt(scanner.nextLine());
 
         // Чтение англо-латинских записей и добавление их в словарь
