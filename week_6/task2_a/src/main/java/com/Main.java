@@ -13,18 +13,11 @@ public class Main {
         // Создаем экземпляр LatinEnglishDictionary
         LatinEnglishDictionary dictionary = new LatinEnglishDictionary();
 
-        // Чтение кол-ва английских слов в словаре
-        System.out.print("Введите число слов и сами слова (построчно): \n");
-        int n = Integer.parseInt(scanner.nextLine());
+        // Создаем экземпляр DictionaryCheck для чтения данных
+        DictionaryCheck dictionaryCheck = new DictionaryCheck(scanner, dictionary);
 
         // Чтение англо-латинских записей и добавление их в словарь
-        for (int i = 0; i < n; i++) {
-            String line = scanner.nextLine();
-            String[] parts = line.split(" - ");
-            String englishWord = parts[0];
-            String[] latinWords = parts[1].split(", ");
-            dictionary.addEntry(englishWord, latinWords);
-        }
+        dictionaryCheck.readEntries();
 
         // Получаем латинско-английский словарь и выводим его
         Map<String, Set<String>> latinToEnglish = dictionary.getLatinToEnglishDictionary();
