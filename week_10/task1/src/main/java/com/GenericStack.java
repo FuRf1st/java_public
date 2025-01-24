@@ -3,7 +3,7 @@ package com;
 import java.util.ArrayList;
 
 public class GenericStack<T> implements Stack<T> {
-    private ArrayList<T> elements;
+    private final ArrayList<T> elements;
 
     public GenericStack() {
         elements = new ArrayList<>();
