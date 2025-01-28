@@ -1,12 +1,11 @@
-package com;
+package com.example;
 
-public class HouseData {
-
+public class HousePriceRecord {
     private String city;
     private int year;
     private double price;
 
-    public HouseData(String city, int year, double price) {
+    public HousePriceRecord(String city, int year, double price) {
         this.city = city;
         this.year = year;
         this.price = price;
