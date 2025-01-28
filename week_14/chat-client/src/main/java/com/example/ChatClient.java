@@ -7,7 +7,7 @@ import java.io.PrintWriter;
 import java.net.Socket;
 
 public class ChatClient {
-    private static final String SERVER_IP = "127.0.0.1";
+    private static final String SERVER_IP = "192.168.0.104";  
     private static final int SERVER_PORT = 12345;
 
     public static void main(String[] args) {
