@@ -1,35 +1,26 @@
 package com.example;
 
-import org.tinylog.Logger;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.List;
+import java.util.Map;
 
 public class HousePriceAnalysis {
 
-    public static void main(String[] args) {
-        if (args.length == 0) {
-            Logger.error("Please provide the path to the dataset as a command line argument.");
-            return;
-        }
-    
-        String datasetPath = args[0];  // Путь к файлу датасета
-        Logger.info("Loading dataset from: {}", datasetPath);
-    
-        // Дальше идет остальной код
-    
-        try {
-            // Загрузка данных
-            DataLoader dataLoader = new DataLoader();
-            var records = dataLoader.loadData(datasetPath);
+    public static void main(String[] args) throws IOException {
+        String filePath = "D:\\pp-2018.csv";
 
-            // Обработка данных
-            DataProcessor dataProcessor = new DataProcessor();
-            var cityYearMaxPrice = dataProcessor.calculateMaxPricesByCityAndYear(records);
+        // Чтение строк из файла
+        List<String> lines = Files.readAllLines(Paths.get(filePath));
 
-            // Визуализация данных
-            ChartVisualizer visualizer = new ChartVisualizer();
-            visualizer.displayCharts(cityYearMaxPrice);
+        // Парсинг данных
+        List<HousePriceRecord> records = HousePriceParser.parseLines(lines);
 
-        } catch (Exception e) {
-            Logger.error(e, "An error occurred during execution.");
-        }
+        // Анализ данных: вычисляем максимальные цены по годам и городам
+        Map<Integer, Map<String, Integer>> yearlyMaxPrices = HousePriceAnalyzer.getYearlyMaxPrices(records);
+
+        // Построение гистограммы
+        HousePriceChart.createHistogram(yearlyMaxPrices);
     }
 }
