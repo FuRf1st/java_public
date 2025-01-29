@@ -16,21 +16,18 @@
     </properties>
 
     <dependencies>
-        <!-- JFreeChart для построения графиков -->
         <dependency>
             <groupId>org.jfree</groupId>
             <artifactId>jfreechart</artifactId>
             <version>1.5.3</version>
         </dependency>
 
-        <!-- Для обработки CSV -->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-csv</artifactId>
             <version>1.8</version>
         </dependency>
 
-        <!-- Для работы с логированием -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>

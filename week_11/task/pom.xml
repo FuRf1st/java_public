@@ -11,10 +11,6 @@
         <maven.compiler.target>21</maven.compiler.target>
     </properties>
 
-    <dependencies>
-        <!-- Добавить зависимости, если потребуется -->
-    </dependencies>
-
     <build>
         <plugins>
             <plugin>
